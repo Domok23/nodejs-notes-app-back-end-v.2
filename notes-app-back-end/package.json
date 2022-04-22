@@ -7,9 +7,17 @@
     "start-dev": "nodemon ./src/server.js",
     "lint": "eslint ./src"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Domok23/nodejs-notes-app-back-end-v.2.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Domok23/nodejs-notes-app-back-end-v.2/issues"
+  },
+  "homepage": "https://github.com/Domok23/nodejs-notes-app-back-end-v.2#readme",
   "devDependencies": {
     "eslint": "^8.13.0",
     "eslint-config-airbnb-base": "^15.0.0",
