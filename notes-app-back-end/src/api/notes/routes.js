@@ -1,9 +1,3 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable import/newline-after-import */
-/* eslint-disable linebreak-style */
-/* eslint-disable no-underscore-dangle */
-/* eslint-disable linebreak-style */
-
 const routes = (handler) => [
   {
     method: 'POST',
@@ -18,7 +12,7 @@ const routes = (handler) => [
   {
     method: 'GET',
     path: '/notes/{id}',
-    handler: handler.postNoteByIdHandler,
+    handler: handler.getNoteByIdHandler,
   },
   {
     method: 'PUT',

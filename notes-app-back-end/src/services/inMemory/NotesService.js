@@ -1,17 +1,11 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable import/newline-after-import */
-/* eslint-disable linebreak-style */
-/* eslint-disable no-underscore-dangle */
-/* eslint-disable linebreak-style */
-/* eslint-disable no-unused-vars */
-
 const { nanoid } = require('nanoid');
-class NoteService {
+
+class NotesService {
   constructor() {
-    this.notes = [];
+    this._notes = [];
   }
 
-  addNote({ title, tags, body }) {
+  addNote({ title, body, tags }) {
     const id = nanoid(16);
     const createdAt = new Date().toISOString();
     const updatedAt = createdAt;
@@ -24,7 +18,9 @@ class NoteService {
       createdAt,
       updatedAt,
     };
+
     this._notes.push(newNote);
+
     const isSuccess = this._notes.filter((note) => note.id === id).length > 0;
 
     if (!isSuccess) {
@@ -46,7 +42,7 @@ class NoteService {
     return note;
   }
 
-  editNoteById(id, { title, tags, body }) {
+  editNoteById(id, { title, body, tags }) {
     const index = this._notes.findIndex((note) => note.id === id);
 
     if (index === -1) {
@@ -73,4 +69,4 @@ class NoteService {
   }
 }
 
-module.exports = NoteService;
+module.exports = NotesService;
